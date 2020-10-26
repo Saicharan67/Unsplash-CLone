@@ -2,9 +2,10 @@ import axios from "axios";
 import config from "./config";
 
 class SearchService {
-  static search({ query, page, perPage }) {
+  static search( query, page, perPage ) {
     page = page || 1;
     perPage = perPage || 30;
+    console.log("static" , query , page , perPage)
     return axios(
       `${config.UNSPLASH_API_URL}/search/photos?client_id=${
         config.UNSPLASH_CLIENT_ID

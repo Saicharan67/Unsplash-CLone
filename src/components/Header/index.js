@@ -12,7 +12,7 @@ import {
   HeaderUserInfo,
   HeaderAvatar,
 } from "./styles"
-
+import Search from '../../layout/Search'
 const Header = () => {
   const INITIAL_STATE = {
     query: "",
@@ -32,12 +32,13 @@ const Header = () => {
   }
 
   return (
+    <>
     <HeaderContainer className="shadowed">
       <HeaderLogoWrap>
         <Logo />
       </HeaderLogoWrap>
       <HeaderSearchForm onSubmit={onSubmitSearchForm}>
-        <HeaderSearchInput type="text" placeholder="Search photos..." onChange={onChangeInput} value={state.query} />
+        <HeaderSearchInput className="Input" type="text" placeholder="Search photos..." onChange={onChangeInput} value={state.query} />
       </HeaderSearchForm>
       <HeaderNav>
         <Link to="/">Home</Link>
@@ -51,6 +52,9 @@ const Header = () => {
         />
       </HeaderUserInfo>
     </HeaderContainer>
+    
+    </>
+   
   )
 }
 

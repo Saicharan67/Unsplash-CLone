@@ -23,6 +23,7 @@ const Home = () => {
           loading: false,
           hasMore: true,
         })
+        console.log("home-data",data)
       })
       .catch((err) => alert(err))
   }

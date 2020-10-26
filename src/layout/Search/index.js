@@ -14,8 +14,10 @@ import {
 } from "./styles"
 
 const Search = (props) => {
-  const { type, query } = props.match.params
-
+  
+ 
+  const { type,query} = props.match.params
+ 
   const getPage = () => {
     switch (type) {
       case "photos":
@@ -25,7 +27,8 @@ const Search = (props) => {
       case "users":
         return <SearchUsers query={query} />
       default:
-        return <div style={{ paddingTop: "100px" }}>BUSCA INCORRETA</div>
+        return <div style={{ paddingTop: "100px" }}>Incorrect Data</div>
+        
     }
   }
 
@@ -33,24 +36,24 @@ const Search = (props) => {
     <Container>
       {/* <SearchTags /> */}
       <SearchQuery>
-        <SearchQueryText>{query}</SearchQueryText>
+        <SearchQueryText>{query.toUpperCase()}</SearchQueryText>
       </SearchQuery>
       <SearchNav>
         <Link to={`/search/photos/${query}`}>
           <SearchNavLink>
-            <SearchNavCount>123</SearchNavCount>
+            
             <SearchNavType>Photos</SearchNavType>
           </SearchNavLink>
         </Link>
         <Link to={`/search/collections/${query}`}>
           <SearchNavLink>
-            <SearchNavCount>123</SearchNavCount>
+            
             <SearchNavType>Collections</SearchNavType>
           </SearchNavLink>
         </Link>
         <Link to={`/search/users/${query}`}>
           <SearchNavLink>
-            <SearchNavCount>123</SearchNavCount>
+            
             <SearchNavType>Users</SearchNavType>
           </SearchNavLink>
         </Link>
