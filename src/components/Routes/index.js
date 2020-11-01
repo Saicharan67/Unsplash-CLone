@@ -10,8 +10,8 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact={true} path="/Unsplash-Clone" component={Home} />
-      <Route path="/collections" component={Collections} />
-      <Route path="/search/:type/:query" component={Search} />
+      <Route path="/Unsplash-Clone/collections" component={Collections} />
+      <Route path="/Unsplash-Clone/search/:type/:query" component={Search} />
 
       <Route component={NotFound} />
     </Switch>
