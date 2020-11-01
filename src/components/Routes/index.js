@@ -9,7 +9,7 @@ import NotFound from "../../layout/NotFound";
 const Routes = () => {
   return (
     <Switch>
-      <Route exact={true} path="/" component={Home} />
+      <Route exact={true} path="/Unsplash-Clone" component={Home} />
       <Route path="/collections" component={Collections} />
       <Route path="/search/:type/:query" component={Search} />
 
